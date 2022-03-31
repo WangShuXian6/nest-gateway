@@ -3,5 +3,6 @@
 
 #lint-staged
 npm run format
+git add -A
 npm run lint
 #node_modules/.bin/lint-staged
