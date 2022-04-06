@@ -1,4 +1,4 @@
-# hrbbcf-backend-data-centre 数据中台后端服务
+# backend-data-centre 数据中台后端服务
 
 ## Description
 
