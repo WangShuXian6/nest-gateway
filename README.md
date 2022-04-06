@@ -1,4 +1,4 @@
-# api 网关
+# hrbbcf-backend-data-centre 数据中台后端服务
 
 ## Description
 
@@ -55,3 +55,9 @@ Nest is [MIT licensed](LICENSE).
 yarn
 yarn build
 ```
+
+## Swagger
+>http://localhost:3000/api
+
+### Swagger JSON
+>http://localhost:3000/api-json

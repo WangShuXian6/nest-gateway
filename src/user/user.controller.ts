@@ -1,8 +1,18 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  Post,
+  UseGuards,
+  UseInterceptors,
+} from '@nestjs/common';
 import { LoginDto } from './dto/login.dto';
+import { TransformInterceptor } from './interceptors/transform.interceptor';
 import { UserService } from './user.service';
 
 @Controller('user')
+@UseInterceptors(TransformInterceptor)
 export class UserController {
   constructor(private readonly userService: UserService) {}
 

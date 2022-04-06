@@ -7,10 +7,11 @@ import {
   UseGuards,
   Body,
 } from '@nestjs/common';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { AxiosResponse } from 'axios';
 
 import { LoginParams, LoginResponse } from './interfaces/login.interface';
+console.log(map);
 
 @Injectable()
 export class UserService {
@@ -19,16 +20,12 @@ export class UserService {
   login(
     @Request() @Body() body: LoginParams,
   ): Observable<AxiosResponse<LoginResponse>> {
-    const { loginname, password, service } = body;
-
+    const { username, password, service } = body;
     console.table(body);
-    // return {
-    //   ticket:'123'
-    // }
     return this.httpService.post(
-      'http://172.16.131.96:32369/mock/14/ucenter/login2Third',
+      'http://172.16.131.96:32368/mock/27/ucenter/login2Third',
       {
-        loginname,
+        loginname: username,
         password,
         service,
       },
